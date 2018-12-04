@@ -1,0 +1,40 @@
+{
+  "name": "react-static-example-basic",
+  "version": "1.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "react-static start",
+    "stage": "react-static build --staging",
+    "build": "react-static build",
+    "bundle": "react-static bundle",
+    "export": "react-static export",
+    "tw:start": "postcss ./src/tailwind-own.css -o ./src/tailwind.css -w",
+    "tw:build": "postcss ./src/tailwind-own.css -o ./src/tailwind.css --env production",
+    "serve": "serve dist -p 3000",
+    "preprod": "yarn run tw:build && yarn run build && yarn run serve",
+    "prod": "yarn run tw:build && yarn run build"
+  },
+  "dependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-helmet": "^5.2.0",
+    "react-hot-loader": "^4.0.0-beta.21",
+    "react-router": "^4.2.0",
+    "react-static": "^5"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.1.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-react-tools": "1.x.x",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "postcss-cli": "^6.0.1",
+    "prettier": "^1.15.3",
+    "serve": "^6.1.0",
+    "tailwindcss": "^0.7.2"
+  }
+}
